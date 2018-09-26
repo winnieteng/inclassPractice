@@ -1,0 +1,18 @@
+"0","a<-5"
+"2","Warning messages:
+"
+"2","1: "
+"2","In dir.create(tempPath, recursive = TRUE) :"
+"2","
+ "
+"2"," cannot create dir 'C:\', reason 'Permission denied'
+"
+"2","2: "
+"2","In strsplit(version_info, ""\n"") :"
+"2","
+ "
+"2"," input string 3 is invalid in this locale
+"
+"0","a2<-5L"
+"0","aVector<-c(5,6,7)"
+"0","a2Vector<-c(5L,6L,7L)"
