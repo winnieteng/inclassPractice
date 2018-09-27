@@ -12,15 +12,15 @@
     "path" : null,
     "project_path" : null,
     "properties" : {
-        "cacheKey" : "9E61BE74",
+        "cacheKey" : "DD21A504",
         "caption" : "student",
-        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=student&cache_key=9E61BE74",
-        "displayedObservations" : 1057,
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=student&cache_key=DD21A504",
+        "displayedObservations" : "1057",
         "environment" : "",
         "object" : "student",
-        "preview" : 0,
-        "totalObservations" : 1057,
-        "variables" : 5
+        "preview" : "0",
+        "totalObservations" : "1057",
+        "variables" : "5"
     },
     "relative_order" : 3,
     "source_on_save" : false,

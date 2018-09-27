@@ -176,21 +176,241 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYTwtNVxuYTI8LTVMXG5hVmVjdG9yPC1jKDUsNiw3KVxuYTJWZWN0b3I8LWMoNUwsNkwsN0wpXG5gYGAifQ== -->
+<pre class="r"><code>a&lt;-5
+a2&lt;-5L
+aVector&lt;-c(5,6,7)
+a2Vector&lt;-c(5L,6L,7L)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYVZlY3Rvci1hXG5cbmBgYCJ9 -->
+<pre class="r"><code>aVector-a
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnVtMTwtMS41Njhcbm51bTI8LTIuMTIxXG5yb3VuZChudW0xLGRpZ2l0cyA9IDIpXG5gYGAifQ== -->
+<pre class="r"><code>num1&lt;-1.568
+num2&lt;-2.121
+round(num1,digits = 2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYjwtXCLpm7/uup7mnKtcIlxuYlZlY3RvcjwtYyhcIumbv+66nuacq1wiLFwiSG93IGFyZSB5b3U/XCIpXG5gYGAifQ== -->
+<pre class="r"><code>b&lt;-&quot;雿末&quot;
+bVector&lt;-c(&quot;雿末&quot;,&quot;How are you?&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYjM8LVwiJ+mbv+66nuacqydcIlxuYjNcbmBgYCJ9 -->
+<pre class="r"><code>b3&lt;-&quot;'雿末'&quot;
+b3</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYjQ8LSdcIumbv+66nuacq1wiJ1xuYjRcbmBgYCJ9 -->
+<pre class="r"><code>b4&lt;-'&quot;雿末&quot;'
+b4</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbnN0dWRlbnQgPC0gcmVhZF9jc3YoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2NvdXJzZS0xMDctMS1wcm9ncmFtbWluZy1mb3ItZGF0YS1zY2llbmNlL21hc3Rlci9kYXRhL3N0dWRlbnQuY3N2XCIpXG5saWJyYXJ5KGRwbHlyKVxubGlicmFyeShtYWdyaXR0cilcbnN0dWRlbnQgJTw+JSBtdXRhdGUoXG4gIOmgqOaBjTxhYj7uprg8YjQ+7quzPGI3Pjw5ZD49Y3V0KOmgqOaBjTxhYj48OTg+LGMoMCwxNTAsMTU1LDE2MCwxNjUsMTcwLDE3NSwxODAsMTg1LDIwMCkpKVxuYGBgIn0= -->
+<pre class="r"><code>library(readr)
+student &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv&quot;)
+library(dplyr)
+library(magrittr)
+student %&lt;&gt;% mutate(
+  頨恍&lt;U+613C&gt;&lt;U+3E62&gt;&lt;U+623C&gt;&lt;U+3E34&gt;&lt;U+623C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E64&gt;=cut(頨恍&lt;U+613C&gt;&lt;U+3E62&gt;&lt;U+393C&gt;&lt;U+3E38&gt;,c(0,150,155,160,165,170,175,180,185,200)))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3R1ZGVudCQ8ZTU+74q+PGU3Pjw5ND7uuIHur7VcbmBgYCJ9 -->
+<pre class="r"><code>student$&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E34&gt;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZmFjdG9yKHN0dWRlbnQkPGU1Pu+KvjxlNz48OTQ+7riB7q+1KSAtPiBzdHVkZW50JDxlNT7vir48ZTc+PDk0Pu64ge6vtVxuYGBgIn0= -->
+<pre class="r"><code>as.factor(student$&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E34&gt;) -&gt; student$&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E34&gt;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGV2ZWxzKHN0dWRlbnQkPGU1Pu+KvjxlNz48OTQ+7riB7q+1KVxuYGBgIn0= -->
+<pre class="r"><code>levels(student$&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E34&gt;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFibGUoc3R1ZGVudCQ8ZTU+74q+PGU3Pjw5ND7uuIHur7UpXG5gYGAifQ== -->
+<pre class="r"><code>table(student$&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E34&gt;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZmFjdG9yKHN0dWRlbnQkPGU1Pu+Fr+aRruipqOWDkSkgLT4gc3R1ZGVudCQ8ZTU+74Wv5pGu6Kmo5YORXG5gYGAifQ== -->
+<pre class="r"><code>as.factor(student$&lt;U+653C&gt;&lt;U+3E35&gt;摮詨僑) -&gt; student$&lt;U+653C&gt;&lt;U+3E35&gt;摮詨僑</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZmFjdG9yKHN0dWRlbnQkPGU2PsKA5om5742GKSAtPiBzdHVkZW50JDxlNj7CgOaJue+NhlxuYGBgIn0= -->
+<pre class="r"><code>as.factor(student$&lt;U+653C&gt;&lt;U+3E36&gt;批) -&gt; student$&lt;U+653C&gt;&lt;U+3E36&gt;批</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFibGUoc3R1ZGVudCRgPGU2PsKA5om5742GYClcbmBgYCJ9 -->
+<pre class="r"><code>table(student$`&lt;U+653C&gt;&lt;U+3E36&gt;批`)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZmFjdG9yKHN0dWRlbnQk6aCo5oGNPGFiPu6muDxiND7uq7M8Yjc+PDlkPixcbiAgICAgICBsZXZlbHM9YyhcIigwLDE1MF1cIixcIigxNTAsMTU1XVwiLCBcIigxNTUsMTYwXVwiLCBcIigxNjAsMTY1XVwiICxcIigxNjUsMTcwXVwiLCBcIigxNzAsMTc1XVwiICxcIigxNzUsMTgwXVwiICxcIigxODAsMTg1XVwiLCBcIigxODUsMjAwXVwiKSxcbiAgICAgICBvcmRlcmVkPVRSVUUpIC0+IHN0dWRlbnQk6aCo5oGNPGFiPu6muDxiND7uq7M8Yjc+7rGgbmBgYCJ9 -->
+<pre class="r"><code>factor(student$頨恍&lt;U+613C&gt;&lt;U+3E62&gt;&lt;U+623C&gt;&lt;U+3E34&gt;&lt;U+623C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E64&gt;,
+       levels=c(&quot;(0,150]&quot;,&quot;(150,155]&quot;, &quot;(155,160]&quot;, &quot;(160,165]&quot; ,&quot;(165,170]&quot;, &quot;(170,175]&quot; ,&quot;(175,180]&quot; ,&quot;(180,185]&quot;, &quot;(185,200]&quot;),
+       ordered=TRUE) -&gt; student$頨恍&lt;U+613C&gt;&lt;U+3E62&gt;&lt;U+623C&gt;&lt;U+3E34&gt;&lt;U+623C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E64&gt;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVpZ2h0TGV2ZWxzIDwtIGMoXCIoMCwxNTBdXCIsXCIoMTUwLDE1NV1cIiwgXCIoMTU1LDE2MF1cIiwgXCIoMTYwLDE2NV1cIiAsXCIoMTY1LDE3MF1cIiwgXCIoMTcwLDE3NV1cIiAsXCIoMTc1LDE4MF1cIiAsXCIoMTgwLDE4NV1cIiwgXCIoMTg1LDIwMF1cIilcbmZhY3RvcihzdHVkZW50JOmgqOaBjTxhYj7uprg8YjQ+7quzPGI3Pjw5ZD4sXG4gICAgICAgbGV2ZWxzPWhlaWdodExldmVscyxcbiAgICAgICBvcmRlcmVkPVRSVUUpIC0+IHN0dWRlbnQk6aCo5oGNPGFiPu6muDxiND7uq7M8Yjc+7rGgbmBgYCJ9 -->
+<pre class="r"><code>heightLevels &lt;- c(&quot;(0,150]&quot;,&quot;(150,155]&quot;, &quot;(155,160]&quot;, &quot;(160,165]&quot; ,&quot;(165,170]&quot;, &quot;(170,175]&quot; ,&quot;(175,180]&quot; ,&quot;(180,185]&quot;, &quot;(185,200]&quot;)
+factor(student$頨恍&lt;U+613C&gt;&lt;U+3E62&gt;&lt;U+623C&gt;&lt;U+3E34&gt;&lt;U+623C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E64&gt;,
+       levels=heightLevels,
+       ordered=TRUE) -&gt; student$頨恍&lt;U+613C&gt;&lt;U+3E62&gt;&lt;U+623C&gt;&lt;U+3E34&gt;&lt;U+623C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E64&gt;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmxpYnJhcnkobHVicmlkYXRlKVxuYSA8LSB5bWQoXCIyMDE3LTAxLTMxXCIpIFxuYiA8LSB5bWRfaG1zKFwiMjAxNy0wMS0zMSAyMDoxMTo1OVwiKVxuYGBgIn0= -->
+<pre class="r"><code>library(dplyr)
+library(lubridate)
+a &lt;- ymd(&quot;2017-01-31&quot;) 
+b &lt;- ymd_hms(&quot;2017-01-31 20:11:59&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYSlcbmNsYXNzKGIpXG5gYGAifQ== -->
+<pre class="r"><code>class(a)
+class(b)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<div id="after-class-practice" class="section level2">
+<h2>after class practice</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSA1XG5hMSA8LSA1TCAgICMjIDxlNT7ur608ZTY+7p6y5pGu7qSZPGJlPu+Xvu6yhDxlNT48OGE+7rin6ZqePGEzPumKteWGvTw4Yz7vi6rmmbfpmp7uob7uvq1pbnRlZ2VyXG5jbGFzcyhhKSAgICMjIG51bWVyaWNcbmNsYXNzKGExKSAgIyMgaW50ZWdlclxuYGBgIn0= -->
+<pre class="r"><code>a &lt;- 5
+a1 &lt;- 5L   ## &lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;摮&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E61&gt;隞&lt;U+613C&gt;&lt;U+3E33&gt;銵冽&lt;U+383C&gt;&lt;U+3E63&gt;晷隞integer
+class(a)   ## numeric
+class(a1)  ## integer</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYVZlY3RvcjwtYyg1LDYsNylcbmEyVmVjdG9yPC1jKDVMLDZMLDdMKVxuY2xhc3MoYVZlY3RvcilcbmBgYCJ9 -->
+<pre class="r"><code>aVector&lt;-c(5,6,7)
+a2Vector&lt;-c(5L,6L,7L)
+class(aVector)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibnVtZXJpY1wiXG4ifQ== -->
+<pre><code>[1] &quot;numeric&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYTJWZWN0b3IpXG5gYGAifQ== -->
+<pre class="r"><code>class(a2Vector)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiaW50ZWdlclwiXG4ifQ== -->
+<pre><code>[1] &quot;integer&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYjwtXCLkvaDlpb1cIlxuYlZlY3RvcjwtYyhcIuS9oOWlvVwiLFwiSG93IGFyZSB5b3U/XCIpXG5jbGFzcyhiKVxuYGBgIn0= -->
+<pre class="r"><code>b&lt;-&quot;你好&quot;
+bVector&lt;-c(&quot;你好&quot;,&quot;How are you?&quot;)
+class(b)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiY2hhcmFjdGVyXCJcbiJ9 -->
+<pre><code>[1] &quot;character&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3MoYlZlY3RvcilcbmBgYCJ9 -->
+<pre class="r"><code>class(bVector)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiY2hhcmFjdGVyXCJcbiJ9 -->
+<pre><code>[1] &quot;character&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmBgYCJ9 -->
+<pre class="r"><code>library(readr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3R1ZGVudCA8LSByZWFkX2NzdihcImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vY291cnNlLTEwNy0xLXByb2dyYW1taW5nLWZvci1kYXRhLXNjaWVuY2UvbWFzdGVyL2RhdGEvc3R1ZGVudC5jc3ZcIilcbmBgYCJ9 -->
+<pre class="r"><code>student &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiYGN1cmxgIHBhY2thZ2Ugbm90IGluc3RhbGxlZCwgZmFsbGluZyBiYWNrIHRvIHVzaW5nIGB1cmwoKWBcblBhcnNlZCB3aXRoIGNvbHVtbiBzcGVjaWZpY2F0aW9uOlxuY29scyhcbiAgpEq+x6Z+ID0gY29sX2NoYXJhY3RlcigpLFxuICClWKXNpmEgPSBjb2xfY2hhcmFjdGVyKCksXG4gIKnKp08gPSBjb2xfY2hhcmFjdGVyKCksXG4gIKitsKogPSBjb2xfZG91YmxlKClcbilcbiJ9 -->
+<pre><code>`curl` package not installed, falling back to using `url()`
+Parsed with column specification:
+cols(
+  &lt;U+613C&gt;&lt;U+3E34&gt;J&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+01E6&gt;~ = col_character(),
+  &lt;U+613C&gt;&lt;U+3E35&gt;X&lt;U+613C&gt;&lt;U+3E35&gt;&lt;U+0366&gt;a = col_character(),
+  &lt;U+613C&gt;&lt;U+3E39&gt;&lt;U+02A7&gt;O = col_character(),
+  &lt;U+613C&gt;&lt;U+3E38&gt;&lt;U+613C&gt;&lt;U+3E64&gt;&lt;U+623C&gt;&lt;U+3E30&gt;&lt;U+613C&gt;&lt;U+3E61&gt; = col_double()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmBgYCJ9 -->
+<pre class="r"><code>library(dplyr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog5oS847ix5oS847i1ZHBseXLmhLzjuLHmhLzjuLZcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDmhLzjuLHmhLzjuLVwYWNrYWdlOnN0YXRz5oS847ix5oS847i2OlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDmhLzjuLHmhLzjuLVwYWNrYWdlOmJhc2XmhLzjuLHmhLzjuLY6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuIn0= -->
+<pre><code>
+Attaching package: &lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E35&gt;dplyr&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E36&gt;
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLg0K</div>
+The following objects are masked from &lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E35&gt;package:stats&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E36&gt;:
+
+    filter, lag
+
+The following objects are masked from &lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E35&gt;package:base&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E36&gt;:
+
+    intersect, setdiff, setequal, union</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShtYWdyaXR0cilcbnN0dWRlbnQgJTw+JSBtdXRhdGUo6Lqr6auY57Sa6LedPWN1dCjouqvpq5gsYygwLDE1MCwxNTUsMTYwLDE2NSwxNzAsMTc1LDE4MCwxODUsMjAwKSkpXG5gYGAifQ== -->
+<pre class="r"><code>library(magrittr)
+student %&lt;&gt;% mutate(身高級距=cut(身高,c(0,150,155,160,165,170,175,180,185,200)))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+</div>
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCmBgYHtyfQ0KYTwtNQ0KYTI8LTVMDQphVmVjdG9yPC1jKDUsNiw3KQ0KYTJWZWN0b3I8LWMoNUwsNkwsN0wpDQpgYGANCg0KYGBge3J9DQphVmVjdG9yLWENCg0KYGBgDQoNCmBgYHtyfQ0KbnVtMTwtMS41NjgNCm51bTI8LTIuMTIxDQpyb3VuZChudW0xLGRpZ2l0cyA9IDIpDQpgYGANCg0KYGBge3J9DQpiPC0i5L2g5aW9Ig0KYlZlY3RvcjwtYygi5L2g5aW9IiwiSG93IGFyZSB5b3U/IikNCmBgYA0KDQpgYGB7cn0NCmIzPC0iJ+S9oOWlvSciDQpiMw0KYGBgDQoNCmBgYHtyfQ0KYjQ8LSci5L2g5aW9IicNCmI0DQpgYGANCg0KYGBge3J9DQpsaWJyYXJ5KHJlYWRyKQ0Kc3R1ZGVudCA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9jb3Vyc2UtMTA3LTEtcHJvZ3JhbW1pbmctZm9yLWRhdGEtc2NpZW5jZS9tYXN0ZXIvZGF0YS9zdHVkZW50LmNzdiIpDQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeShtYWdyaXR0cikNCnN0dWRlbnQgJTw+JSBtdXRhdGUoDQogIOi6q+mrmOe0mui3nT1jdXQo6Lqr6auYLGMoMCwxNTAsMTU1LDE2MCwxNjUsMTcwLDE3NSwxODAsMTg1LDIwMCkpKQ0KYGBgDQpgYGB7cn0NCnN0dWRlbnQk5Ye655Sf5ZywDQpgYGANCg0KYGBge3J9DQphcy5mYWN0b3Ioc3R1ZGVudCTlh7rnlJ/lnLApIC0+IHN0dWRlbnQk5Ye655Sf5ZywDQpgYGANCmBgYHtyfQ0KbGV2ZWxzKHN0dWRlbnQk5Ye655Sf5ZywKQ0KYGBgDQoNCmBgYHtyfQ0KdGFibGUoc3R1ZGVudCTlh7rnlJ/lnLApDQpgYGANCmBgYHtyfQ0KYXMuZmFjdG9yKHN0dWRlbnQk5YWl5a245bm0KSAtPiBzdHVkZW50JOWFpeWtuOW5tA0KYGBgDQoNCmBgYHtyfQ0KYXMuZmFjdG9yKHN0dWRlbnQk5oCn5YilKSAtPiBzdHVkZW50JOaAp+WIpQ0KYGBgDQoNCmBgYHtyfQ0KdGFibGUoc3R1ZGVudCRg5oCn5YilYCkNCmBgYA0KDQpgYGB7cn0NCmZhY3RvcihzdHVkZW50JOi6q+mrmOe0mui3nSwNCiAgICAgICBsZXZlbHM9YygiKDAsMTUwXSIsIigxNTAsMTU1XSIsICIoMTU1LDE2MF0iLCAiKDE2MCwxNjVdIiAsIigxNjUsMTcwXSIsICIoMTcwLDE3NV0iICwiKDE3NSwxODBdIiAsIigxODAsMTg1XSIsICIoMTg1LDIwMF0iKSwNCiAgICAgICBvcmRlcmVkPVRSVUUpIC0+IHN0dWRlbnQk6Lqr6auY57Sa6LedDQpgYGANCg0KYGBge3J9DQpoZWlnaHRMZXZlbHMgPC0gYygiKDAsMTUwXSIsIigxNTAsMTU1XSIsICIoMTU1LDE2MF0iLCAiKDE2MCwxNjVdIiAsIigxNjUsMTcwXSIsICIoMTcwLDE3NV0iICwiKDE3NSwxODBdIiAsIigxODAsMTg1XSIsICIoMTg1LDIwMF0iKQ0KZmFjdG9yKHN0dWRlbnQk6Lqr6auY57Sa6LedLA0KICAgICAgIGxldmVscz1oZWlnaHRMZXZlbHMsDQogICAgICAgb3JkZXJlZD1UUlVFKSAtPiBzdHVkZW50JOi6q+mrmOe0mui3nQ0KYGBgDQpgYGB7cn0NCmxpYnJhcnkoZHBseXIpDQpsaWJyYXJ5KGx1YnJpZGF0ZSkNCmEgPC0geW1kKCIyMDE3LTAxLTMxIikgDQpiIDwtIHltZF9obXMoIjIwMTctMDEtMzEgMjA6MTE6NTkiKQ0KYGBgDQoNCmBgYHtyfQ0KY2xhc3MoYSkNCmNsYXNzKGIpDQpgYGANCg0KIyMgYWZ0ZXIgY2xhc3MgcHJhY3RpY2UNCg0KYGBge3J9DQphIDwtIDUNCmExIDwtIDVMICAgIyMg5Zyo5pW45a2X5b6M6Z2i5YqgTOS7o+ihqOaMh+a0vuS7lueCumludGVnZXINCmNsYXNzKGEpICAgIyMgbnVtZXJpYw0KY2xhc3MoYTEpICAjIyBpbnRlZ2VyDQpgYGANCg0KYGBge3J9DQphVmVjdG9yPC1jKDUsNiw3KQ0KYTJWZWN0b3I8LWMoNUwsNkwsN0wpDQpjbGFzcyhhVmVjdG9yKSAgICMjIG51bWVyaWMNCmNsYXNzKGEyVmVjdG9yKSAgIyMgaW50ZWdlcg0KYGBgDQpgYGB7cn0NCmI8LSLkvaDlpb0iDQpiVmVjdG9yPC1jKCLkvaDlpb0iLCJIb3cgYXJlIHlvdT8iKQ0KY2xhc3MoYikNCmNsYXNzKGJWZWN0b3IpDQpgYGANCg0KYGBge3J9DQpsaWJyYXJ5KHJlYWRyKQ0Kc3R1ZGVudCA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9jb3Vyc2UtMTA3LTEtcHJvZ3JhbW1pbmctZm9yLWRhdGEtc2NpZW5jZS9tYXN0ZXIvZGF0YS9zdHVkZW50LmNzdiIpDQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeShtYWdyaXR0cikNCnN0dWRlbnQgJTw+JSBtdXRhdGUoDQogIOi6q+mrmOe0mui3nT1jdXQo6Lqr6auYLGMoMCwxNTAsMTU1LDE2MCwxNjUsMTcwLDE3NSwxODAsMTg1LDIwMCkpKQ0KYGBgDQoNCg==</div>
 
 
 

@@ -3,16 +3,149 @@ title: "R Notebook"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
 
 ```{r}
-plot(cars)
+a<-5
+a2<-5L
+aVector<-c(5,6,7)
+a2Vector<-c(5L,6L,7L)
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+```{r}
+aVector-a
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+```
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+```{r}
+num1<-1.568
+num2<-2.121
+round(num1,digits = 2)
+```
+
+```{r}
+b<-"你好"
+bVector<-c("你好","How are you?")
+```
+
+```{r}
+b3<-"'你好'"
+b3
+```
+
+```{r}
+b4<-'"你好"'
+b4
+```
+
+```{r}
+library(readr)
+student <- read_csv("https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv")
+library(dplyr)
+library(magrittr)
+student %<>% mutate(
+  身高級距=cut(身高,c(0,150,155,160,165,170,175,180,185,200)))
+```
+```{r}
+student$出生地
+```
+
+```{r}
+as.factor(student$出生地) -> student$出生地
+```
+```{r}
+levels(student$出生地)
+```
+
+```{r}
+table(student$出生地)
+```
+```{r}
+as.factor(student$入學年) -> student$入學年
+```
+
+```{r}
+as.factor(student$性別) -> student$性別
+```
+
+```{r}
+table(student$`性別`)
+```
+
+```{r}
+factor(student$身高級距,
+       levels=c("(0,150]","(150,155]", "(155,160]", "(160,165]" ,"(165,170]", "(170,175]" ,"(175,180]" ,"(180,185]", "(185,200]"),
+       ordered=TRUE) -> student$身高級距
+```
+
+```{r}
+heightLevels <- c("(0,150]","(150,155]", "(155,160]", "(160,165]" ,"(165,170]", "(170,175]" ,"(175,180]" ,"(180,185]", "(185,200]")
+factor(student$身高級距,
+       levels=heightLevels,
+       ordered=TRUE) -> student$身高級距
+```
+```{r}
+library(dplyr)
+library(lubridate)
+a <- ymd("2017-01-31") 
+b <- ymd_hms("2017-01-31 20:11:59")
+```
+
+```{r}
+class(a)
+class(b)
+```
+
+## after class practice
+
+```{r}
+a <- 5
+a1 <- 5L   ## 在數字後面加L代表指派他為integer
+class(a)   ## numeric
+class(a1)  ## integer
+```
+
+```{r}
+aVector<-c(5,6,7)
+a2Vector<-c(5L,6L,7L)
+class(aVector)   ## numeric
+class(a2Vector)  ## integer
+```
+```{r}
+b<-"你好"
+bVector<-c("你好","How are you?")
+class(b)
+class(bVector)
+```
+
+```{r}
+library(readr)
+student <- read_csv("https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv")
+library(dplyr)
+library(magrittr)
+student %<>% mutate(
+  身高級距=cut(身高,c(0,150,155,160,165,170,175,180,185,200)))
+## mutate()：can add new variables
+## cut()：can divide the range of x into intervals 
+```
+
+```{r}
+as.factor(student$出生地) -> student$出生地
+```
+```{r}
+levels(student$出生地)  ## levels() 查看變數的所有類別
+```
+```{r}
+table(student$出生地)  ## table 列聯表
+```
+```{r}
+factor(student$身高級距,
+       levels=c("(0,150]","(150,155]", "(155,160]", "(160,165]" ,"(165,170]", "(170,175]" ,"(175,180]" ,"(180,185]", "(185,200]"),
+       ordered=TRUE) -> student$身高級距
+```
+```{r}
+heightLevels <- c("(0,150]","(150,155]", "(155,160]", "(160,165]" ,"(165,170]", "(170,175]" ,"(175,180]" ,"(180,185]", "(185,200]")
+factor(student$身高級距,
+       levels=heightLevels,
+       ordered=TRUE) -> student$身高級距
+```
+
