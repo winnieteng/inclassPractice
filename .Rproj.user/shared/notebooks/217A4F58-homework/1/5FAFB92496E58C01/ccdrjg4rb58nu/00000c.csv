@@ -1,0 +1,15 @@
+"0","## 3"
+"0","gender <- c(""男性"", ""男性"", ""女性"", ""男性"", ""女性"", ""男性"")"
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
+"0","gender <- factor(gender,levels=c(""男性"",""女性""),labels=c(""Male"", ""Female""))"
+"0","class(gender)"
+"1","[1]"
+"1"," ""factor"""
+"1","
+"

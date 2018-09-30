@@ -1,0 +1,20 @@
+"0","library(readr)"
+"0","student <- read_csv(""https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv"")"
+"2","`curl` package not installed, falling back to using `url()`
+"
+"2","Parsed with column specification:
+cols(
+  入學年 = col_character(),
+  出生地 = col_character(),
+  性別 = col_character(),
+  身高 = col_double()
+)
+"
+"0","class(student)"
+"1","[1]"
+"1"," ""tbl_df""    "
+"1"," ""tbl""       "
+"1"," ""data.frame"""
+"1","
+"
+"0","head(student,n=10)"

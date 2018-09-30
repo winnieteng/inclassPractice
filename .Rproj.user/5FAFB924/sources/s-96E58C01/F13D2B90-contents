@@ -1,0 +1,26 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+## 1
+x <- c(2L, 'a', 3.0, 4)
+x
+class(x)
+```
+```{r}
+## 2
+library(readr)
+student <- read_csv("https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv")
+class(student)
+head(student,n=10)
+```
+```{r}
+## 3
+gender <- c("男性", "男性", "女性", "男性", "女性", "男性")
+gender <- factor(gender,levels=c("男性","女性"),labels=c("Male", "Female"))
+class(gender)
+```
+
+
