@@ -1,0 +1,9 @@
+"0","library(readr)"
+"0","studentID <- read_csv(""https://raw.githubusercontent.com/tpemartin/github-data/master/studentID.csv"")"
+"2","`curl` package not installed, falling back to using `url()`
+"
+"2","Parsed with column specification:
+cols(
+  ¾Ç¸¹ = col_integer()
+)
+"
