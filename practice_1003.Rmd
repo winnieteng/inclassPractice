@@ -1,0 +1,64 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+a<-"2017-01-31"
+class(a)
+```
+
+```{r}
+library(dplyr)
+library(lubridate)
+a <- ymd("2017-01-31") 
+b <- ymd_hms("2017-01-31 20:11:59")
+class(a)
+class(b)
+```
+
+```{r}
+a <- ymd("2017/01/31") 
+b <- ymd_hms("2017-01-31 2:53:00pm")
+```
+
+```{r}
+a <- seq(ymd("2001-01-01"),ymd("2018-09-01"),by="month")
+b <- seq(ymd("2001-01-01"),ymd("2018-09-01"),by="quarter")
+c <- seq(ymd("2001-01-01"),ymd("2018-09-01"),by="year")
+```
+```{r}
+a
+```
+```{r}
+library(readr)
+studentID <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/studentID.csv")
+```
+```{r}
+library(stringr)
+str_sub(studentID$學號, 4, 6)
+table(str_sub(studentID$學號, 4, 6))
+```
+```{r}
+str_c(letters,LETTERS)
+str_c(letters,LETTERS,sep="-")
+str_c("lowercase: ", letters, ", capital: ", LETTERS)
+```
+```{r}
+library(readr)
+githubData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/githubData.csv")
+```
+```{r}
+githubData[c(2,3,4),] -> sampleGithub
+str_c(sampleGithub$`GitHub username`,
+      sampleGithub$`GitHub repo name`)
+```
+
+```{r}
+date1<-c("099/01","099/02","099/03")
+date1
+class(date1)
+date2 <- ymd_hms(date1)
+date2+year(1911)
+```
+

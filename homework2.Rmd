@@ -1,0 +1,37 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(readr)
+library(stringr)
+library(lubridate)
+TyphoonData <- read_csv("https://raw.githubusercontent.com/GaryLKL/course-programming-for-ds-Quiz/master/TyphoonData.csv", col_types = cols(.default = col_character()))
+Year <- TyphoonData$年份
+```
+```{r}
+class(Year)
+```
+```{r}
+Year <- as.integer(Year)
+```
+
+```{r}
+Year <- Year-1911
+```
+```{r}
+## 第一題總整理
+library(readr)
+library(stringr)
+library(lubridate)
+TyphoonData <- read_csv("https://raw.githubusercontent.com/GaryLKL/course-programming-for-ds-Quiz/master/TyphoonData.csv", col_types = cols(.default = col_character()))
+Year <- TyphoonData$年份
+Year <- as.integer(Year)
+Year <- Year-1911
+```
+
+```{r}
+Year <- as.character(Year)
+Year <- str_c("民國", Year, "年")
+```
+
