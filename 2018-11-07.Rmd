@@ -1,0 +1,49 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+民國年月<-c("099/01","099/02","099/03")
+```
+
+```{r}
+library(stringr)
+library(lubridate)
+民國年月<-c("099/01","099/02","099/03")
+
+# 1
+str_c("1",民國年月,"/01")->民國年月
+
+# 2
+lubridate::ymd(民國年月) -> 民國年月
+
+# 3
+民國年月 + years(911)
+```
+```{r}
+民國年月<-c("099/01","099/02","099/03")
+
+library(dplyr)
+# 1
+民國年月 %>% 
+  str_c("1", . ,"/01") %>%
+  ymd %>%
+  { . + years(911) }
+```
+```{r}
+collegeData %>% 
+  mutate(
+    `日間∕進修別`=as.factor(`日間∕進修別`),
+    等級別=as.factor(等級別),
+    一年級男生=parse_number(一年級男生,locale=cl),
+    一年級女生=parse_number(一年級女生,locale=cl)
+  ) -> collegeData4
+
+collegeData4 %>%
+  mutate(
+    一年級男生每千人=一年級男生/1000,
+    一年級女生每千人=一年級女生/1000
+    ) -> collegeData5
+```
+
