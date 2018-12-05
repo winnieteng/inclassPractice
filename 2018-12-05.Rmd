@@ -1,0 +1,78 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr); library(dplyr); library(stringr); library(lubridate)
+```
+
+```{r}
+libraryData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/library100_102.csv")
+```
+
+```{r}
+mutate(
+  libraryData,
+  書籍類別=as.factor(書籍類別),
+  書籍館藏地=as.factor(書籍館藏地),
+  學院=as.factor(學院),
+  借閱時間=ymd_hms(借閱時間)
+  ) -> libraryData
+```
+
+```{r}
+max(libraryData$讀者借閱冊數)-> maxNumber
+min(libraryData$讀者借閱冊數)-> minNumber
+paste0("最大值： ",maxNumber, " 最小值： ",minNumber)
+```
+
+```{r}
+max(libraryData$入學年)-> maxNumber
+min(libraryData$入學年)-> minNumber
+paste0("最大值： ",maxNumber, " 最小值： ",minNumber)
+```
+
+```{r}
+max(libraryData$書籍上架年月)-> maxNumber
+min(libraryData$書籍上架年月)-> minNumber
+paste0("最大值： ",maxNumber, " 最小值： ",minNumber)
+```
+
+```{r}
+minMaxFun <- function(x){
+  max(x)-> maxNumber
+  min(x)-> minNumber
+  paste0("最大值： ",maxNumber, " 最小值： ",minNumber)
+}
+```
+
+```{r}
+minMaxFun(libraryData$讀者借閱冊數)
+
+minMaxFun(libraryData$入學年)
+
+minMaxFun(libraryData$書籍上架年月)
+```
+
+```{r}
+minMaxFun1 <- function(x){
+  max(x)-> maxNumber
+  min(x)-> minNumber
+  paste0("最大值： ",maxNumber, " 最小值： ",minNumber)
+}
+minMaxFun1(libraryData$讀者借閱冊數)-> outputValue1
+outputValue1
+```
+
+```{r}
+minMaxFun2 <- function(x){
+  max(x)-> maxNumber
+  min(x)-> minNumber
+  paste0("最大值： ",maxNumber, " 最小值： ",minNumber)-> output
+  return(maxNumber)
+}
+minMaxFun2(libraryData$讀者借閱冊數)-> outputValue2
+outputValue2
+```
+

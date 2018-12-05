@@ -1,0 +1,42 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+library(readr)
+student <- read_csv("https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv")
+library(dplyr)
+library(magrittr)
+student %<>% mutate(
+  身高級距=cut(身高,c(0,150,155,160,165,170,175,180,185,200)))
+```
+```{r}
+as.factor(student$出生地) -> student$出生地
+```
+```{r}
+heightLevels <- c("(0,150]","(150,155]", "(155,160]", "(160,165]" ,"(165,170]", "(170,175]" ,"(175,180]" ,"(180,185]", "(185,200]")
+factor(student$身高級距,
+       levels=heightLevels,
+       ordered=TRUE) -> student$身高級距
+```
+```{r}
+library(lubridate)
+seq(ymd("2001-01-01"),ymd("2018-09-01"),by="year")
+```
+```{r}
+library(readr)
+githubData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/githubData.csv")
+```
+
+```{r}
+githubData[c(2,3,4),] -> sampleGithub
+str_c(sampleGithub$`GitHub username`,
+      sampleGithub$`GitHub repo name`)
+str_c("https://github.com/",
+      sampleGithub$`GitHub username`,
+      "/",
+      sampleGithub$`GitHub repo name`)
+```
+
