@@ -17,14 +17,14 @@ mutate(
   書籍類別=as.factor(書籍類別),
   書籍館藏地=as.factor(書籍館藏地),
   學院=as.factor(學院),
-  借閱時間=ymd_hms(借閱時間)
+  借閱時間=ymd_hms(借閱時間,tz="Asia/Taipei")
   ) -> libraryData
 ```
 
 ```{r}
 max(libraryData$讀者借閱冊數)-> maxNumber
 min(libraryData$讀者借閱冊數)-> minNumber
-paste0("最大值： ",maxNumber, " 最小值： ",minNumber)
+paste0("最大值： ",maxNumber, " 最小值： ",minNumber)  #paste0()函數在串接字串的時候中間不會留空格
 ```
 
 ```{r}
@@ -74,5 +74,43 @@ minMaxFun2 <- function(x){
 }
 minMaxFun2(libraryData$讀者借閱冊數)-> outputValue2
 outputValue2
+```
+
+```{r}
+# not_numeric函數，判斷x不是數值class
+not_numeric <- function(x){
+  !is.numeric(x)
+}
+```
+
+```{r}
+# select 函數用法
+# method 1
+libraryData %>%
+  select(讀者借閱冊數,書籍出版日期) 
+
+#method 2
+select(libraryData,讀者借閱冊數,書籍出版日期)
+```
+
+```{r}
+# summarise 用法
+# na.rm代表移除na值
+#method 1
+libraryData %>%
+  select(讀者借閱冊數,書籍出版日期) %>%
+  summarise(
+    讀者平均借閱冊數=mean(讀者借閱冊數),
+    最小書籍出版日期=min(書籍出版日期,na.rm=TRUE),
+    最大書籍出版日期=max(書籍出版日期,na.rm=TRUE)
+  )
+
+# method 2
+summarise(
+    libraryData,讀者平均借閱冊數=mean(讀者借閱冊數),
+    最小書籍出版日期=min(書籍出版日期,na.rm=TRUE),
+    最大書籍出版日期=max(書籍出版日期,na.rm=TRUE)
+  )
+
 ```
 
