@@ -48,11 +48,65 @@ i<-1
 ```
 
 ```{r}
+# 0
+allBorrowCount <- vector("numeric",18)
+for(i in c(1:18)){
+  # 1
+  storageLocation_i <- storageLocations[i] 
+  # 2
+  numericalIndexForSubsample<-which(libraryData$書籍館藏地==storageLocation_i)
+  subsample_i <- libraryData[numericalIndexForSubsample,]
+  # 3
+  borrowCount_i <- nrow(subsample_i)
+  # 4
+  allBorrowCount[[i]]<-borrowCount_i  
+}
+```
+
+```{r}
+a<-c("A","D","E")
+# 兩者相同
+a[1]
+a[[1]]
+# 取多個
+a[c(1,2)]
+# ERROR a[[c(1,2)]]
+```
+
+```{r}
+b<-c(element1="A",element2="D",element3="E")
+b[1]
+b[[1]]
+```
+
+```{r}
+libraryData["書籍館藏地"] %>% class
+
+libraryData[["書籍館藏地"]] %>% class
+```
+
+```{r}
 libraryData %>%
-  group_by(書籍館藏地) %>%
+  group_by(書籍館藏地) %>% # 依書籍館藏地不同形成不同subsample_i
   summarise(
-    borrowCount=length(學號)
+    borrowCount=n() #每個subsample_i計算 borrowCount=nrow(subsample_i)
   ) -> result
-result
+result 
+```
+
+```{r}
+# 0
+allBorrowCount <- vector("numeric",18)
+for(i in c(1:18)){
+  # 1
+  storageLocation_i <- storageLocations[i] 
+  # 2
+  numericalIndexForSubsample<-which(libraryData$書籍館藏地==storageLocation_i)
+  subsample_i <- libraryData[numericalIndexForSubsample,]
+  # 3
+  borrowCount_i <- length(subsample_i$學號)
+  # 4
+  allBorrowCount[[i]]<-borrowCount_i  
+}
 ```
 
