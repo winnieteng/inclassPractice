@@ -8,33 +8,6 @@ library(readr); library(dplyr); library(stringr); library(lubridate)
 ```
 
 ```{r}
-plasticContainer <- list(
-  greenBox=c("paper","scissor"),     # location 1
-  redBox=c(1L,3L,2.5),               # location 2
-  blueBox=c(TRUE,FALSE,TRUE,TRUE)    # location 3
-)
-```
-
-```{r}
-plasticContainer[c("greenBox","redBox")] # or plasticContainer[c(1,2)]
-```
-
-```{r}
-plasticContainer[c("greenBox")] # or plasticContainer[c(1,2)]
-```
-
-```{r}
-plasticContainer[["greenBox"]] # or plasticContainer[[1]]
-```
-
-```{r}
-download.file("https://github.com/tpemartin/github-data/blob/master/plotly_4070_neda.Rda?raw=true",destfile = "plotly_4070_neda.Rda")
-load("C:\\inclassPractice\\plotly_4070_neda.Rda")
-library(plotly)
-plotly_4070_neda
-```
-
-```{r}
 library(readr)
 transcriptData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcript100_102.csv",
                   col_types = cols(
@@ -53,5 +26,31 @@ totalCredits<-function(x){
       總實得學分數=sum(學分數[及格])
     )  
 }
+```
+
+```{r}
+transcriptData %>%
+  filter(學屆==100,str_sub(學號,5,6)=="P1") -> subsample
+subsample$學號 %>% unique -> 符合條件學號
+```
+
+```{r}
+creditResults<-vector("list",length(符合條件學號))
+```
+
+```{r}
+for(i in seq_along(符合條件學號)){
+  creditResults[[i]] <- totalCredits(符合條件學號[i])
+}
+```
+
+```{r}
+library(readr)
+library(tidyr)
+libraryData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/libraryData2.csv")
+libraryData %>%
+  group_by(學院) %>%
+  nest(.key="各院借閱資料") ->
+  libraryDataNested
 ```
 
